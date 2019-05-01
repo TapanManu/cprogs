@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<string.h>
+//enter substring at given position
 void main()
 {
 char str[25],ch[25],new[50];
