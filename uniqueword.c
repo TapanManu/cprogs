@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<string.h>
+//remove repeated words in string
 void main()
 {
 char str[20][20];
