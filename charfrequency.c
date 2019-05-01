@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<string.h>
+//count character frequency
 void main()
 {char str[25];
 int i,j,count;
