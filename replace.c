@@ -42,7 +42,7 @@ for(k=pos,j=0;k<(n2+pos);j++,k++)
 {
 new[k]=ch2[j];
 }
-for(i=pos+n1-1,j=n2+pos;str[i]!='\0';i++,j++)
+for(i=pos+n1,j=n2+pos;str[i]!='\0';i++,j++)
 {
 new[j]=str[i];
 }
