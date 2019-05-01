@@ -1,4 +1,5 @@
 #include<stdio.h>
+//process complex numbers
 struct complex
 {
 float real;
