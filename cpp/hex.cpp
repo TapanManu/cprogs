@@ -4,7 +4,8 @@
 using namespace std; 
 
 stack <int> s;
-char* decToHex(int ctr){
+void decToHex(int ctr){
+    char val[20];
     while(ctr>0){
         char ch=65;
         int d = ctr%16;
@@ -17,25 +18,27 @@ char* decToHex(int ctr){
         s.push(int(ch));
         ctr/=16;
     }
+    int i=0;
+    while(!s.empty()){
+        if(s.top()>=65 && s.top()<=90){
+            
+            val[i]=(char)s.top();
+            i++;
+        }
+        else{
+            val[i]=s.top()+48;      //char equivalent of num
+            i++;
+        }
+        s.pop();
+    }
+    val[i++]='\0';
+    cout<<val<<"\n";
 }
   
 // Driver function 
 int main() 
 { 
-    int ctr = 255;
+    int ctr = 256;
     decToHex(ctr);
-    char val[20];
-    int i=0;
-    while(!s.empty()){
-        if(s.top()>=65 && s.top()<=90){
-            val[i++]=(char)s.top();
-        }
-        else{
-            val[i++]=s.top();
-        }
-        s.pop();
-    }
-    val[i++]='\0';
-    cout<<val;
     return 0; 
 }
